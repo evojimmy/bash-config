@@ -12,28 +12,16 @@ export HISTFILESIZE=100000
 export HISTCONTROL=erasedups:ignorespace
 shopt -s histappend
 
-export PAGER=less
-set -o noclobber
-setterm -blength 0
-
 alias lsd="ls -al --time-style=+%D | grep `date +%D`"
 alias ll="ls -alrth"
-alias pdf="qpdfview"
-alias mid="aplaymidi --port=128:0"
 alias cp="cp -i"
 alias mv="mv -i"
 alias rm="rm -i"
 alias mkdir="mkdir -p"
+alias vkeybd="vkeybd --octave 9"
+alias octave="octave -qf"
 
 export BREAK_CHARS="(){}[],^%$#@\"\";''|\\"
 
-stty -tostop
-shopt -s autocd
-shopt -s cdspell
+export PS1="[\u@\h \w]\\$ "
 
-
-if [ -f ~/.dircolors ]; then
-    eval `dircolors ~/.dircolors`
-fi
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
