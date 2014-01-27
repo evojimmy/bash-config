@@ -12,6 +12,8 @@ export HISTFILESIZE=100000
 export HISTCONTROL=erasedups:ignorespace
 shopt -s histappend
 
+export PYTHONSTARTUP=~/.pythonrc
+
 alias lsd="ls -al --time-style=+%D | grep `date +%D`"
 alias ll="ls -alrth"
 alias cp="cp -i"
